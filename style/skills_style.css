@@ -1,0 +1,326 @@
+
+
+/* Container styles */
+body {
+  /*background-image:linear-gradient(to right,#ef4dbc,#bc4bfd,#5c9cfe,#24cffb);*/
+  
+}
+
+.container {
+  padding: 25px 0;
+  text-align: center;
+  background-image: url('../images/skills_img/1.jpeg');
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  min-width: 950px;
+  min-height: 900px;
+  background-repeat: no-repeat;
+  }
+
+.chart {
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: 10px;
+  text-align: center;
+}
+
+.chart {
+  padding: 100px 50px;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  line-height: 25px;
+}
+
+.chart img {
+  position: absolute;
+  max-width: 100px;
+  max-height: 100px;
+  
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.html {
+  top: 50px;
+  left: 45px;
+}
+
+.html + svg .outer {
+  stroke: rgba(238, 63, 14, 0.7);
+}
+
+.css {
+  top: 55px;
+  left: 48px;
+}
+
+.css + svg .outer {
+  stroke: rgba(2, 119, 223, 0.7);
+}
+
+.javascript {
+  max-width: 90px;
+  max-height: 90px;
+  top: 45px;
+  left: 45px;
+}
+
+.javascript + svg .outer {
+  stroke: rgba(244, 224, 44, 0.7);
+}
+
+.php {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.php + svg .outer {
+  stroke: rgba(78, 90, 207, 0.7);
+}
+
+.mysql {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.mysql + svg .outer {
+  stroke: rgba(228, 142, 0, 0.7);
+}
+
+
+.jquery {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.jquery + svg .outer {
+  stroke: rgba(16, 77, 235,0.7);
+}
+
+
+.wp{
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.wp + svg .outer {
+  stroke: rgba(11, 162, 236,0.7);
+}
+
+
+.bootstrap{
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.bootstrap + svg .outer {
+  stroke: rgba(105,32,173,0.7);
+}
+
+
+
+.chart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 13px;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+  stroke-dashoffset: 534 !important;
+  -webkit-animation-play-state: paused;
+}
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+.chart[data-percent='100'] .outer {
+  stroke-dashoffset: 0;
+  -webkit-animation: show100 2s;
+  animation: show100 2s;
+}
+
+.chart[data-percent='90'] .outer {
+  stroke-dashoffset: 30;
+  -webkit-animation: show90 2s;
+  animation: show90 2s;
+}
+
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show75 2s;
+  animation: show75 2s;
+}
+
+.chart[data-percent='60'] .outer {
+  stroke-dashoffset: 170;
+  -webkit-animation: show60 2s;
+  animation: show60 2s;
+}
+
+.chart[data-percent='50'] .outer {
+  stroke-dashoffset: 267;
+  -webkit-animation: show50 2s;
+  animation: show50 2s;
+}
+
+.chart[data-percent='40'] .outer {
+  stroke-dashoffset: 300;
+  -webkit-animation: show40 2s;
+  animation: show40 2s;
+}
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+@-webkit-keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes show90 {
+	from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 30;
+  }
+}
+
+@keyframes show90 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 30;
+  }
+}
+
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@-webkit-keyframes show60 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+@keyframes show60 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes show50 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 267;
+  }
+}
+
+@keyframes show50 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 267;
+  }
+}
+
+@-webkit-keyframes show40 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 300;
+  }
+}
+
+@keyframes show40 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 300;
+  }
+}
+/* END Keyframes for the initial animation */
